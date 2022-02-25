@@ -1,0 +1,10 @@
+D:\Programming\ASP Dot Net\Practice\Windows\InventoryManagement\InventoryManagementApp\InventoryManagementApp\bin\Debug\InventoryManagementApp.exe.config
+D:\Programming\ASP Dot Net\Practice\Windows\InventoryManagement\InventoryManagementApp\InventoryManagementApp\bin\Debug\InventoryManagementApp.exe
+D:\Programming\ASP Dot Net\Practice\Windows\InventoryManagement\InventoryManagementApp\InventoryManagementApp\bin\Debug\InventoryManagementApp.pdb
+D:\Programming\ASP Dot Net\Practice\Windows\InventoryManagement\InventoryManagementApp\InventoryManagementApp\obj\Debug\InventoryManagementApp.csprojAssemblyReference.cache
+D:\Programming\ASP Dot Net\Practice\Windows\InventoryManagement\InventoryManagementApp\InventoryManagementApp\obj\Debug\InventoryManagementApp.Properties.Resources.resources
+D:\Programming\ASP Dot Net\Practice\Windows\InventoryManagement\InventoryManagementApp\InventoryManagementApp\obj\Debug\InventoryManagementApp.csproj.GenerateResource.cache
+D:\Programming\ASP Dot Net\Practice\Windows\InventoryManagement\InventoryManagementApp\InventoryManagementApp\obj\Debug\InventoryManagementApp.csproj.CoreCompileInputs.cache
+D:\Programming\ASP Dot Net\Practice\Windows\InventoryManagement\InventoryManagementApp\InventoryManagementApp\obj\Debug\InventoryManagementApp.exe
+D:\Programming\ASP Dot Net\Practice\Windows\InventoryManagement\InventoryManagementApp\InventoryManagementApp\obj\Debug\InventoryManagementApp.pdb
+D:\Programming\ASP Dot Net\Practice\Windows\InventoryManagement\InventoryManagementApp\InventoryManagementApp\obj\Debug\InventoryManagementApp.userTypeForm.resources
