@@ -74,5 +74,17 @@ namespace InventoryManagementApp.Gateway
             rowAffected = command.ExecuteNonQuery();
             return rowAffected;
         }
+
+        public int UpdateUserType(UserTypes type)
+        {
+            connection = new SqlConnection(connectionString);
+            connection.Open();
+            query = "UPDATE User_Type_T SET User_Type='" + type.UserType + "', User_Status='" + type.Status + "'WHERE Id='" + type.Id + "' ";
+
+            command = new SqlCommand(query, connection);
+            rowAffected = command.ExecuteNonQuery();
+            connection.Close();
+            return rowAffected;
+        }
     }
 }

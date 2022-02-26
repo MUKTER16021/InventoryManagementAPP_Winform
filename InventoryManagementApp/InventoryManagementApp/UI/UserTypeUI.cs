@@ -23,28 +23,53 @@ namespace InventoryManagementApp
 
         private void userTypeForm_Load(object sender, EventArgs e)
         {
+            LoadComboBoxValue();
+
+            LoadAllTypesListView();
+        }
+
+        private void LoadComboBoxValue()
+        {
             Dictionary<string, string> comboDictionary = new Dictionary<string, string>();
             comboDictionary.Add("1", "Active");
             comboDictionary.Add("2", "Inactive");
             statusComboBox.DataSource = new BindingSource(comboDictionary, null);
             statusComboBox.DisplayMember = "Value";
             statusComboBox.ValueMember = "Key";
-
-            LoadAllTypes();
         }
 
         private void addButton_Click(object sender, EventArgs e)
         {
+            if (addButton.Text == "ADD")
+            {
+                UserTypes userTypes = GetValueFromTextBoxAndComboBox();
+                string message = userTypesManager.AddUserTypes(userTypes);
+                MessageBox.Show(message);
+            }
+            else
+            {
+                UserTypes userTypes = GetValueFromTextBoxAndComboBox();
+                userTypes.Id =Convert.ToInt32(showIdLabel.Text);
+                string message = userTypesManager.UpdateUserType(userTypes);
+                MessageBox.Show(message);
+                addButton.Text = "ADD";
+                removeButton.Visible = false;
+            }
+            LoadAllTypesListView();
+            LoadComboBoxValue();
+            userTypeTextBox.Clear();
 
+        }
+
+        private UserTypes GetValueFromTextBoxAndComboBox()
+        {
             UserTypes userTypes = new UserTypes();
             userTypes.UserType = userTypeTextBox.Text;
             userTypes.Status = ((KeyValuePair<string, string>) statusComboBox.SelectedItem).Value;
-            string message = userTypesManager.AddUserTypes(userTypes);
-            MessageBox.Show(message);
-            LoadAllTypes();
+            return userTypes;
         }
 
-        private void LoadAllTypes()
+        private void LoadAllTypesListView()
         {
             showUserTypeListView.Items.Clear();
             List<UserTypes> userTypes = userTypesManager.GetAllUserTypeses();
@@ -65,12 +90,25 @@ namespace InventoryManagementApp
             ListViewItem selectecdItem = showUserTypeListView.SelectedItems[0];
             UserTypes types = selectecdItem.Tag as UserTypes;
             userTypeTextBox.Text = types.UserType;
-            statusComboBox.SelectedItem=types.Status;
             showIdLabel.Text = types.Id.ToString();
+            Dictionary<string, string> comboDictionary = new Dictionary<string, string>();
+            comboDictionary.Add("1", types.Status);
+            if (types.Status == "Active")
+            {
+                comboDictionary.Add("2", "Inactive");
+            }
+            if (types.Status == "Inactive")
+            {
+                comboDictionary.Add("2", "Active");
+            }
+            
+            statusComboBox.DataSource = new BindingSource(comboDictionary, null);
+            statusComboBox.DisplayMember = "Value";
+            statusComboBox.ValueMember = "Key";
 
             addButton.Text = "Update";
-            //removeButton.Enabled = true;
-        }
+            removeButton.Visible = true;
+                    }
 
         private void removeButton_Click(object sender, EventArgs e)
         {
@@ -81,9 +119,10 @@ namespace InventoryManagementApp
             {
                 string message = userTypesManager.DeleteTypes(id);
                 MessageBox.Show(message);
-                LoadAllTypes();
-                addButton.Text = "Save";
-                removeButton.Enabled = false;
+                LoadAllTypesListView();
+                addButton.Text = "ADD";
+                removeButton.Visible = false;
+                userTypeTextBox.Clear();
 
             }
         }

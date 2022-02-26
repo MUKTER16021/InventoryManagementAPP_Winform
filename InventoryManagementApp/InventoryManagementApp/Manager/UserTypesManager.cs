@@ -43,6 +43,20 @@ namespace InventoryManagementApp.Manager
 
         }
 
+        public string UpdateUserType(UserTypes types)
+        {
+            if (userTypesGateway.UserTypeExist(types))
+            {
+                return "Type Already Exist!";
+            }
+            int rowAffected = userTypesGateway.UpdateUserType(types);
+            if (rowAffected > 0)
+            {
+                return " Update SuccessFully";
+            }
+            return "Update Failed";
+        }
+
 
 
     }

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.removeButton = new System.Windows.Forms.Button();
             this.showIdLabel = new System.Windows.Forms.Label();
             this.addButton = new System.Windows.Forms.Button();
             this.statusComboBox = new System.Windows.Forms.ComboBox();
@@ -39,7 +40,6 @@
             this.showUserTypeListView = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.removeButton = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -59,6 +59,17 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "User Type Entry";
+            // 
+            // removeButton
+            // 
+            this.removeButton.Location = new System.Drawing.Point(286, 90);
+            this.removeButton.Name = "removeButton";
+            this.removeButton.Size = new System.Drawing.Size(137, 38);
+            this.removeButton.TabIndex = 5;
+            this.removeButton.Text = "Remove";
+            this.removeButton.UseVisualStyleBackColor = true;
+            this.removeButton.Visible = false;
+            this.removeButton.Click += new System.EventHandler(this.removeButton_Click);
             // 
             // showIdLabel
             // 
@@ -147,16 +158,6 @@
             // 
             this.columnHeader2.Text = "Status";
             this.columnHeader2.Width = 216;
-            // 
-            // removeButton
-            // 
-            this.removeButton.Location = new System.Drawing.Point(286, 90);
-            this.removeButton.Name = "removeButton";
-            this.removeButton.Size = new System.Drawing.Size(137, 38);
-            this.removeButton.TabIndex = 5;
-            this.removeButton.Text = "Remove";
-            this.removeButton.UseVisualStyleBackColor = true;
-            this.removeButton.Click += new System.EventHandler(this.removeButton_Click);
             // 
             // userTypeForm
             // 
