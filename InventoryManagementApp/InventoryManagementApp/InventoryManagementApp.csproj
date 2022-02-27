@@ -47,8 +47,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Gateway\UserGateway.cs" />
     <Compile Include="Gateway\UserTypesGateway.cs" />
+    <Compile Include="Manager\UserManager.cs" />
     <Compile Include="Manager\UserTypesManager.cs" />
+    <Compile Include="Model\User.cs" />
     <Compile Include="Model\UserTypes.cs" />
     <Compile Include="UI\UserTypeUI.cs">
       <SubType>Form</SubType>
@@ -94,13 +97,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\manIcon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\man-2-icon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\i2.png" />
+    <Folder Include="Resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
