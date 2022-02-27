@@ -8,3 +8,4 @@ D:\Programming\ASP Dot Net\Practice\Windows\InventoryManagement\InventoryManagem
 D:\Programming\ASP Dot Net\Practice\Windows\InventoryManagement\InventoryManagementApp\InventoryManagementApp\obj\Debug\InventoryManagementApp.exe
 D:\Programming\ASP Dot Net\Practice\Windows\InventoryManagement\InventoryManagementApp\InventoryManagementApp\obj\Debug\InventoryManagementApp.pdb
 D:\Programming\ASP Dot Net\Practice\Windows\InventoryManagement\InventoryManagementApp\InventoryManagementApp\obj\Debug\InventoryManagementApp.userTypeForm.resources
+D:\Programming\ASP Dot Net\Practice\Windows\InventoryManagement\InventoryManagementApp\InventoryManagementApp\obj\Debug\InventoryManagementApp.UI.UserUI.resources

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using InventoryManagementApp.UI;
 
 namespace InventoryManagementApp
 {
@@ -16,7 +17,7 @@ namespace InventoryManagementApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new userTypeForm());
+            Application.Run(new UserUI());
         }
     }
 }
